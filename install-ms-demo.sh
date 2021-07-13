@@ -71,7 +71,8 @@ BUILD_REPOSITORY_NAME="ms-demo"
 cd \$SOURCEPATH
 
 rm -rf \$BUILD_REPOSITORY_NAME
-git clone https://github.com/amadorZamora/ms-demo.git
+git clone https://github.com/jorgeRodriguezAntiquera/BFF-Spotify.git
+git checkout master
 cd \$BUILD_REPOSITORY_NAME
 
 $WORKSPACE/apache-maven-3.5.4/bin/mvn clean package -DskipTests=true
