@@ -83,7 +83,7 @@ cp target/\$FILENAME \$IACPATH
 cd $IACPATH
 docker build --no-cache --build-arg JAR_FILE=\$FILENAME -t microservices:v1 .
 docker rm -f ms-demo 
-docker run -d -p 8080:8080 --name ms-demo microservices:v1
+docker run -d -p 8080:8080 --name BFF-Spotify microservices:v1
 EOF
 
 
@@ -93,4 +93,4 @@ echo "################################################################"
 
 chmod +x $IACPATH/docker-install.sh
 sh $IACPATH/docker-install.sh
-docker logs -f ms-demo
+docker logs -f BFF-Spotify
