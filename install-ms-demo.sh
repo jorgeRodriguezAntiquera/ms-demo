@@ -82,7 +82,7 @@ cp target/\$FILENAME \$IACPATH
 
 cd $IACPATH
 docker build --no-cache --build-arg JAR_FILE=\$FILENAME -t microservices:v1 .
-docker rm -f ms-demo 
+docker rm -f BFF-Spotify 
 docker run -d -p 8080:8080 --name BFF-Spotify microservices:v1
 EOF
 
